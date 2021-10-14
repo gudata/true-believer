@@ -1,0 +1,52 @@
+Log file created at: 2021/10/10 20:28:36
+Running on machine: guda-ThinkPad-T540p
+Binary: Built with gc go1.17.1 for linux/amd64
+Log line format: [IWEF]mmdd hh:mm:ss.uuuuuu threadid file:line] msg
+I1010 20:28:36.067733    9697 out.go:298] Setting OutFile to fd 1 ...
+I1010 20:28:36.068075    9697 out.go:350] isatty.IsTerminal(1) = false
+I1010 20:28:36.068079    9697 out.go:311] Setting ErrFile to fd 2...
+I1010 20:28:36.068085    9697 out.go:350] isatty.IsTerminal(2) = false
+I1010 20:28:36.075762    9697 root.go:313] Updating PATH: /home/guda/.minikube/bin
+W1010 20:28:36.088653    9697 root.go:291] Error reading config file at /home/guda/.minikube/config/config.json: open /home/guda/.minikube/config/config.json: no such file or directory
+I1010 20:28:36.089195    9697 notify.go:169] Checking for updates...
+I1010 20:28:36.281012    9697 out.go:177] CurrentVersion: v1.23.2
+I1010 20:28:36.312754    9697 out.go:177] LatestVersion: v1.23.2
+Log file created at: 2021/10/11 17:47:25
+Running on machine: guda-ThinkPad-T540p
+Binary: Built with gc go1.17.1 for linux/amd64
+Log line format: [IWEF]mmdd hh:mm:ss.uuuuuu threadid file:line] msg
+I1011 17:47:25.822681   82139 out.go:298] Setting OutFile to fd 1 ...
+I1011 17:47:25.823379   82139 out.go:350] isatty.IsTerminal(1) = false
+I1011 17:47:25.823386   82139 out.go:311] Setting ErrFile to fd 2...
+I1011 17:47:25.823393   82139 out.go:350] isatty.IsTerminal(2) = false
+I1011 17:47:25.823793   82139 root.go:313] Updating PATH: /home/guda/.minikube/bin
+W1011 17:47:25.823897   82139 root.go:291] Error reading config file at /home/guda/.minikube/config/config.json: open /home/guda/.minikube/config/config.json: no such file or directory
+I1011 17:47:25.823961   82139 notify.go:169] Checking for updates...
+I1011 17:47:25.904325   82139 out.go:177] CurrentVersion: v1.23.2
+I1011 17:47:25.910084   82139 out.go:177] LatestVersion: v1.23.2
+Log file created at: 2021/10/11 17:47:34
+Running on machine: guda-ThinkPad-T540p
+Binary: Built with gc go1.17.1 for linux/amd64
+Log line format: [IWEF]mmdd hh:mm:ss.uuuuuu threadid file:line] msg
+I1011 17:47:34.480770   82357 out.go:298] Setting OutFile to fd 1 ...
+I1011 17:47:34.480928   82357 out.go:350] isatty.IsTerminal(1) = false
+I1011 17:47:34.480930   82357 out.go:311] Setting ErrFile to fd 2...
+I1011 17:47:34.480934   82357 out.go:350] isatty.IsTerminal(2) = false
+I1011 17:47:34.481012   82357 root.go:313] Updating PATH: /home/guda/.minikube/bin
+W1011 17:47:34.481101   82357 root.go:291] Error reading config file at /home/guda/.minikube/config/config.json: open /home/guda/.minikube/config/config.json: no such file or directory
+I1011 17:47:34.481167   82357 notify.go:169] Checking for updates...
+I1011 17:47:34.565065   82357 out.go:177] CurrentVersion: v1.23.2
+I1011 17:47:34.581310   82357 out.go:177] LatestVersion: v1.23.2
+Log file created at: 2021/10/12 12:16:33
+Running on machine: guda-ThinkPad-T540p
+Binary: Built with gc go1.17.1 for linux/amd64
+Log line format: [IWEF]mmdd hh:mm:ss.uuuuuu threadid file:line] msg
+I1012 12:16:33.163033  166943 out.go:298] Setting OutFile to fd 1 ...
+I1012 12:16:33.163276  166943 out.go:350] isatty.IsTerminal(1) = false
+I1012 12:16:33.163281  166943 out.go:311] Setting ErrFile to fd 2...
+I1012 12:16:33.163287  166943 out.go:350] isatty.IsTerminal(2) = false
+I1012 12:16:33.165978  166943 root.go:313] Updating PATH: /home/guda/.minikube/bin
+W1012 12:16:33.166128  166943 root.go:291] Error reading config file at /home/guda/.minikube/config/config.json: open /home/guda/.minikube/config/config.json: no such file or directory
+I1012 12:16:33.166200  166943 notify.go:169] Checking for updates...
+I1012 12:16:33.273659  166943 out.go:177] CurrentVersion: v1.23.2
+I1012 12:16:33.277519  166943 out.go:177] LatestVersion: v1.23.2
