@@ -9,12 +9,14 @@ import AddCircleOutlineIcon from '@mui/icons-material/AddCircleOutline';
 import Protected from "./Protected.js"
 
 import { grey } from '@mui/material/colors';
+import { Container } from "@mui/material";
+import { Alert } from "@mui/material";
 
 
 class Status extends React.Component {
   constructor(props) {
     super(props);
-    this.state = {protections: props.protections}
+    this.state = {protections: props.protections, protected: props.protected};
   }
 
   showBox(item) {
@@ -36,9 +38,15 @@ class Status extends React.Component {
         <Grid item xs={12} >
           <Typography variant="h2" align="center">Active Shields</Typography>
         </Grid>
-        {this.state.protections.map((item) => {
-          return this.showBox(item);
-        })}
+        { this.state.protected
+            ? this.state.protections.map((item) => {
+                return this.showBox(item);
+              })
+            :  <Container>
+                <Alert severity="error">You are unprotected!</Alert>
+              </Container>
+          }
+
         <Grid item xs={6} >
           <Link to="/protections" >
             <Button size="small" sx={{mx: 'auto', display: 'flex' }}>

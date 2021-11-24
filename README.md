@@ -72,28 +72,3 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/t
 
 
 
-# saved
-
-- [Library for components](https://mui-treasury.com/components/card/)
-
-
-        <nav>
-          <ul>
-            <li>
-              <Link to="/">Home</Link>
-            </li>
-            <li>
-              <Link to="/test/amsler">
-                <Button  to="/test/amsler" variant="contained" aria-label="5G Shield">
-                  5G Shield <SignalCellularAlt />
-                </Button>
-              </Link>
-
-
-
-            </li>
-            <li>
-              <Link to="/apointments">Covid19</Link>
-            </li>
-          </ul>
-        </nav>

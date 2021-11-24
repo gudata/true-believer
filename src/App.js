@@ -23,6 +23,8 @@ import airplane_crash from './Protections/images/airplane_crash.png'
 
 
 import Paper from '@mui/material/Paper';
+import Container from '@mui/material/Container';
+import Typography from '@mui/material/Typography';
 
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 
@@ -63,16 +65,17 @@ class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
+      protected: false,
       protections: [
-        {key: 'fiveG', enabled: true, label: '5G', description: '', list_image: fiveG, image: fiveG},
+        {key: 'fiveG', enabled: false, label: 'Your 5G Protection', description: '', list_image: fiveG, image: fiveG},
         {key: 'covid', enabled: false, label: 'Covid 19', description: '', list_image: covid19, image: covid19},
-        {key: 'bad_eyes', enabled: true, label: 'Bad Eyes', description: '', list_image: bad_eyes, image: bad_eyes},
-        {key: 'vegan', enabled: true, label: 'Vegan', description: 'Only vegan food', list_image: vegan, image: vegan},
+        {key: 'bad_eyes', enabled: false, label: 'Bad Eyes', description: '', list_image: bad_eyes, image: bad_eyes},
+        {key: 'vegan', enabled: false, label: 'Vegan', description: 'Only vegan food', list_image: vegan, image: vegan},
         {key: 'bad_luck', enabled: false, label: 'Bad Luck', description: '', list_image: bad_luck, image: bad_luck},
         {key: 'energy_vampire', enabled: false, label: 'Energy Vampire', description: '', list_image: energy_vampire, image: energy_vampire},
         {key: 'vampire', enabled: false, label: 'Vampire', description: 'Real vampires', list_image: vampire, image: vampire},
-        {key: 'train_crash', enabled: true, label: 'Train Crash', description: '', list_image: train_crash, image: train_crash},
-        {key: 'airplane_crash', enabled: true, label: 'Airplane Crash', description: '', list_image: airplane_crash, image: airplane_crash},
+        {key: 'train_crash', enabled: false, label: 'Train Crash', description: '', list_image: train_crash, image: train_crash},
+        {key: 'airplane_crash', enabled: false, label: 'Airplane Crash', description: '', list_image: airplane_crash, image: airplane_crash},
       ]
     }
   }
@@ -81,34 +84,41 @@ class App extends React.Component {
     console.log(updatedItem);
     console.log(event.target.checked);
     updatedItem.enabled = !updatedItem.enabled;
+    let is_protected = false;
 
     let protections = this.state.protections.map((item) => {
+      if (item.enabled === true) {
+        is_protected = true;
+      }
       return item.key === updatedItem.key? updatedItem: item;
     })
 
     this.setState({protections: protections});
+    this.setState({protected: is_protected});
   }
 
   render() {
     return (
       <ThemeProvider theme={theme}>
         <div className="App">
-          <Router>
-            <header className="App-header">
-              <Switch>
-                <Route exact path="/">
-                  <Status protections={this.state.protections}/>
-                </Route>
-                <Route path="/protections">
-                  <Protections protections={this.state.protections} handleChange={this.handleChange}/>
-                </Route>
-              </Switch>
-            </header>
-            <Paper sx={{ position: 'fixed', bottom: 0, left: 0, right: 0 }} elevation={4}>
-              <MainNavigation/>
-            </Paper>
+          <Container>
+            <Router>
+              <header className="App-header">
+                <Switch>
+                  <Route exact path="/">
+                    <Status protections={this.state.protections} protected={this.state.protected}/>
+                  </Route>
+                  <Route path="/protections">
+                    <Protections protections={this.state.protections} handleChange={this.handleChange}/>
+                  </Route>
+                </Switch>
+              </header>
+              <Paper sx={{ position: 'fixed', bottom: 0, left: 0, right: 0 }} elevation={4}>
+                <MainNavigation/>
+              </Paper>
 
-          </Router>
+            </Router>
+          </Container>
 
         </div>
       </ThemeProvider>
